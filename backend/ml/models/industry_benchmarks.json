@@ -1,0 +1,417 @@
+{
+  "AI / Machine Learning": {
+    "total_companies": 47,
+    "ipo_count": 1,
+    "acquired_count": 3,
+    "closed_count": 2,
+    "active_count": 41,
+    "exit_success_rate_percent": 66.7,
+    "median_funding_usd": 3243011.5,
+    "avg_funding_usd": 14105762.225622479,
+    "avg_funding_rounds": 1.8,
+    "avg_competitor_density": 109.3,
+    "top_geographies": {
+      "United States": 16,
+      "USA": 8,
+      "Germany": 3,
+      "United Kingdom": 3,
+      "France": 2
+    }
+  },
+  "AgriTech": {
+    "total_companies": 14,
+    "ipo_count": 1,
+    "acquired_count": 1,
+    "closed_count": 1,
+    "active_count": 11,
+    "exit_success_rate_percent": 66.7,
+    "median_funding_usd": 740000.0,
+    "avg_funding_usd": 19778965.5,
+    "avg_funding_rounds": 2.8,
+    "avg_competitor_density": 65.1,
+    "top_geographies": {
+      "United States": 10,
+      "United Kingdom": 2,
+      "Kenya": 1
+    }
+  },
+  "CleanTech": {
+    "total_companies": 118,
+    "ipo_count": 4,
+    "acquired_count": 7,
+    "closed_count": 10,
+    "active_count": 96,
+    "exit_success_rate_percent": 52.4,
+    "median_funding_usd": 4500000.0,
+    "avg_funding_usd": 30285492.142437864,
+    "avg_funding_rounds": 2.2,
+    "avg_competitor_density": 630.9,
+    "top_geographies": {
+      "United States": 69,
+      "Canada": 7,
+      "United Kingdom": 5,
+      "Israel": 5,
+      "India": 2
+    }
+  },
+  "ClimateTech": {
+    "total_companies": 16,
+    "ipo_count": 1,
+    "acquired_count": 1,
+    "closed_count": 2,
+    "active_count": 12,
+    "exit_success_rate_percent": 50.0,
+    "median_funding_usd": 2031980.0,
+    "avg_funding_usd": 79616913.53846154,
+    "avg_funding_rounds": 2.3,
+    "avg_competitor_density": 59.7,
+    "top_geographies": {
+      "United States": 7,
+      "United Kingdom": 2,
+      "China": 1,
+      "Finland": 1,
+      "Cayman Islands": 1
+    }
+  },
+  "Cybersecurity": {
+    "total_companies": 108,
+    "ipo_count": 3,
+    "acquired_count": 17,
+    "closed_count": 7,
+    "active_count": 81,
+    "exit_success_rate_percent": 74.1,
+    "median_funding_usd": 3500000.0,
+    "avg_funding_usd": 13324359.763149334,
+    "avg_funding_rounds": 2.0,
+    "avg_competitor_density": 565.6,
+    "top_geographies": {
+      "United States": 64,
+      "United Kingdom": 7,
+      "Israel": 5,
+      "Canada": 5,
+      "Switzerland": 3
+    }
+  },
+  "DeepTech": {
+    "total_companies": 181,
+    "ipo_count": 8,
+    "acquired_count": 20,
+    "closed_count": 15,
+    "active_count": 138,
+    "exit_success_rate_percent": 65.1,
+    "median_funding_usd": 4200000.0,
+    "avg_funding_usd": 16245267.702737281,
+    "avg_funding_rounds": 1.9,
+    "avg_competitor_density": 975.6,
+    "top_geographies": {
+      "United States": 106,
+      "United Kingdom": 10,
+      "Netherlands": 5,
+      "France": 5,
+      "Sweden": 5
+    }
+  },
+  "E-commerce": {
+    "total_companies": 285,
+    "ipo_count": 4,
+    "acquired_count": 17,
+    "closed_count": 23,
+    "active_count": 240,
+    "exit_success_rate_percent": 47.7,
+    "median_funding_usd": 1300000.0,
+    "avg_funding_usd": 22541897.76234991,
+    "avg_funding_rounds": 1.8,
+    "avg_competitor_density": 917.0,
+    "top_geographies": {
+      "United States": 133,
+      "United Kingdom": 16,
+      "China": 12,
+      "India": 12,
+      "Canada": 9
+    }
+  },
+  "EdTech": {
+    "total_companies": 169,
+    "ipo_count": 1,
+    "acquired_count": 7,
+    "closed_count": 8,
+    "active_count": 152,
+    "exit_success_rate_percent": 50.0,
+    "median_funding_usd": 750000.0,
+    "avg_funding_usd": 5564587.138484703,
+    "avg_funding_rounds": 1.9,
+    "avg_competitor_density": 755.3,
+    "top_geographies": {
+      "United States": 94,
+      "United Kingdom": 14,
+      "India": 7,
+      "Canada": 5,
+      "China": 4
+    }
+  },
+  "FinTech": {
+    "total_companies": 260,
+    "ipo_count": 5,
+    "acquired_count": 16,
+    "closed_count": 17,
+    "active_count": 222,
+    "exit_success_rate_percent": 55.3,
+    "median_funding_usd": 2391520.0,
+    "avg_funding_usd": 19000567.693670016,
+    "avg_funding_rounds": 1.9,
+    "avg_competitor_density": 1177.4,
+    "top_geographies": {
+      "United States": 142,
+      "United Kingdom": 20,
+      "India": 10,
+      "China": 6,
+      "Australia": 5
+    }
+  },
+  "FoodTech": {
+    "total_companies": 47,
+    "ipo_count": 1,
+    "acquired_count": 2,
+    "closed_count": 3,
+    "active_count": 41,
+    "exit_success_rate_percent": 50.0,
+    "median_funding_usd": 538500.0,
+    "avg_funding_usd": 7200501.333333333,
+    "avg_funding_rounds": 1.6,
+    "avg_competitor_density": 245.8,
+    "top_geographies": {
+      "United States": 31,
+      "United Kingdom": 4,
+      "Indonesia": 1,
+      "Singapore": 1,
+      "Japan": 1
+    }
+  },
+  "HRTech": {
+    "total_companies": 49,
+    "ipo_count": 1,
+    "acquired_count": 3,
+    "closed_count": 4,
+    "active_count": 41,
+    "exit_success_rate_percent": 50.0,
+    "median_funding_usd": 1692282.5,
+    "avg_funding_usd": 15836020.357142856,
+    "avg_funding_rounds": 1.9,
+    "avg_competitor_density": 217.5,
+    "top_geographies": {
+      "United States": 28,
+      "United Kingdom": 5,
+      "Switzerland": 2,
+      "Germany": 2,
+      "Japan": 1
+    }
+  },
+  "HealthTech": {
+    "total_companies": 715,
+    "ipo_count": 47,
+    "acquired_count": 49,
+    "closed_count": 42,
+    "active_count": 576,
+    "exit_success_rate_percent": 69.6,
+    "median_funding_usd": 4974997.0,
+    "avg_funding_usd": 23362649.833322417,
+    "avg_funding_rounds": 2.1,
+    "avg_competitor_density": 5195.9,
+    "top_geographies": {
+      "United States": 501,
+      "United Kingdom": 30,
+      "Canada": 21,
+      "Israel": 16,
+      "India": 14
+    }
+  },
+  "InsurTech": {
+    "total_companies": 12,
+    "ipo_count": 1,
+    "acquired_count": 1,
+    "closed_count": 1,
+    "active_count": 9,
+    "exit_success_rate_percent": 66.7,
+    "median_funding_usd": 25000000.0,
+    "avg_funding_usd": 32343120.111111112,
+    "avg_funding_rounds": 1.9,
+    "avg_competitor_density": 68.6,
+    "top_geographies": {
+      "United States": 9,
+      "Indonesia": 1,
+      "India": 1,
+      "France": 1
+    }
+  },
+  "LegalTech": {
+    "total_companies": 17,
+    "ipo_count": 1,
+    "acquired_count": 1,
+    "closed_count": 1,
+    "active_count": 14,
+    "exit_success_rate_percent": 66.7,
+    "median_funding_usd": 400000.0,
+    "avg_funding_usd": 711831.0588235294,
+    "avg_funding_rounds": 1.5,
+    "avg_competitor_density": 112.3,
+    "top_geographies": {
+      "United States": 12,
+      "Germany": 1,
+      "Canada": 1,
+      "Ukraine": 1,
+      "Australia": 1
+    }
+  },
+  "Logistics": {
+    "total_companies": 32,
+    "ipo_count": 1,
+    "acquired_count": 2,
+    "closed_count": 3,
+    "active_count": 26,
+    "exit_success_rate_percent": 50.0,
+    "median_funding_usd": 4475000.0,
+    "avg_funding_usd": 17691058.535210725,
+    "avg_funding_rounds": 1.9,
+    "avg_competitor_density": 108.0,
+    "top_geographies": {
+      "United States": 15,
+      "India": 2,
+      "Canada": 2,
+      "United Arab Emirates": 1,
+      "Brazil": 1
+    }
+  },
+  "MarTech": {
+    "total_companies": 311,
+    "ipo_count": 4,
+    "acquired_count": 37,
+    "closed_count": 28,
+    "active_count": 241,
+    "exit_success_rate_percent": 59.4,
+    "median_funding_usd": 1600000.0,
+    "avg_funding_usd": 13871228.457551438,
+    "avg_funding_rounds": 2.1,
+    "avg_competitor_density": 1662.2,
+    "top_geographies": {
+      "United States": 201,
+      "United Kingdom": 24,
+      "Germany": 8,
+      "France": 7,
+      "Canada": 6
+    }
+  },
+  "Media & Entertainment": {
+    "total_companies": 547,
+    "ipo_count": 5,
+    "acquired_count": 45,
+    "closed_count": 63,
+    "active_count": 433,
+    "exit_success_rate_percent": 44.2,
+    "median_funding_usd": 966285.0,
+    "avg_funding_usd": 11694263.465084685,
+    "avg_funding_rounds": 1.7,
+    "avg_competitor_density": 2305.8,
+    "top_geographies": {
+      "United States": 288,
+      "United Kingdom": 30,
+      "Canada": 21,
+      "China": 14,
+      "France": 12
+    }
+  },
+  "Mobility": {
+    "total_companies": 68,
+    "ipo_count": 1,
+    "acquired_count": 4,
+    "closed_count": 5,
+    "active_count": 57,
+    "exit_success_rate_percent": 50.0,
+    "median_funding_usd": 2873563.0,
+    "avg_funding_usd": 12909324.348793723,
+    "avg_funding_rounds": 1.8,
+    "avg_competitor_density": 333.8,
+    "top_geographies": {
+      "United States": 42,
+      "Canada": 4,
+      "India": 4,
+      "United Kingdom": 3,
+      "Germany": 2
+    }
+  },
+  "Other / Unspecified": {
+    "total_companies": 1017,
+    "ipo_count": 15,
+    "acquired_count": 62,
+    "closed_count": 139,
+    "active_count": 800,
+    "exit_success_rate_percent": 35.6,
+    "median_funding_usd": 2000000.0,
+    "avg_funding_usd": 12634614.182213254,
+    "avg_funding_rounds": 1.4,
+    "avg_competitor_density": 4014.9,
+    "top_geographies": {
+      "United States": 490,
+      "United Kingdom": 53,
+      "China": 34,
+      "Canada": 29,
+      "India": 27
+    }
+  },
+  "PropTech": {
+    "total_companies": 73,
+    "ipo_count": 2,
+    "acquired_count": 3,
+    "closed_count": 3,
+    "active_count": 64,
+    "exit_success_rate_percent": 62.5,
+    "median_funding_usd": 1925000.0,
+    "avg_funding_usd": 23762902.214285713,
+    "avg_funding_rounds": 1.8,
+    "avg_competitor_density": 437.4,
+    "top_geographies": {
+      "United States": 44,
+      "United Kingdom": 5,
+      "India": 4,
+      "China": 3,
+      "Canada": 2
+    }
+  },
+  "SaaS": {
+    "total_companies": 799,
+    "ipo_count": 13,
+    "acquired_count": 108,
+    "closed_count": 75,
+    "active_count": 602,
+    "exit_success_rate_percent": 61.7,
+    "median_funding_usd": 2500000.0,
+    "avg_funding_usd": 12102608.910442913,
+    "avg_funding_rounds": 1.8,
+    "avg_competitor_density": 4668.3,
+    "top_geographies": {
+      "United States": 508,
+      "United Kingdom": 48,
+      "Canada": 24,
+      "India": 17,
+      "France": 16
+    }
+  },
+  "TravelTech": {
+    "total_companies": 128,
+    "ipo_count": 1,
+    "acquired_count": 7,
+    "closed_count": 11,
+    "active_count": 109,
+    "exit_success_rate_percent": 42.1,
+    "median_funding_usd": 490000.0,
+    "avg_funding_usd": 9516465.723536484,
+    "avg_funding_rounds": 1.5,
+    "avg_competitor_density": 392.9,
+    "top_geographies": {
+      "United States": 57,
+      "United Kingdom": 14,
+      "India": 11,
+      "Spain": 5,
+      "France": 5
+    }
+  }
+}
