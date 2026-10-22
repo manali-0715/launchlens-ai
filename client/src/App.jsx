@@ -8,6 +8,7 @@ import BusinessPlanGenerator from './components/BusinessPlanGenerator';
 import AiChatbot from './components/AiChatbot';
 import DatasetExplorer from './components/DatasetExplorer';
 import ProjectInfoModal from './components/ProjectInfoModal';
+import AuthModal from './components/AuthModal';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('validator');
@@ -15,6 +16,16 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [sampleIdeas, setSampleIdeas] = useState([]);
   const [result, setResult] = useState(null);
+
+  // Authentication State
+  const [user, setUser] = useState(() => {
+    try {
+      const savedUser = localStorage.getItem('launchlens_user');
+      return savedUser ? JSON.parse(savedUser) : null;
+    } catch {
+      return null;
+    }
+  });
 
   const [formData, setFormData] = useState({
     startup_name: "LaunchLens AI",
@@ -30,6 +41,30 @@ export default function App() {
     country: "India",
     tech_stack: "React, Vite, Tailwind CSS, Python, FastAPI, Scikit-Learn"
   });
+
+  // Verify stored session on mount
+  useEffect(() => {
+    const token = localStorage.getItem('launchlens_token');
+    if (token) {
+      fetch('/api/auth/me', {
+        headers: { 'Authorization': `Bearer ${token}` }
+      })
+      .then(res => {
+        if (!res.ok) throw new Error("Invalid session");
+        return res.json();
+      })
+      .then(data => {
+        setUser(data.user);
+        localStorage.setItem('launchlens_user', JSON.stringify(data.user));
+      })
+      .catch(() => {
+        // Clear expired or invalid token
+        localStorage.removeItem('launchlens_token');
+        localStorage.removeItem('launchlens_user');
+        setUser(null);
+      });
+    }
+  }, []);
 
   // Fetch sample ideas and run initial validation on mount
   useEffect(() => {
@@ -69,14 +104,43 @@ export default function App() {
     handleValidate(sample, true);
   };
 
+  const handleAuthSuccess = (authenticatedUser, token) => {
+    setUser(authenticatedUser);
+  };
+
+  const handleLogout = async () => {
+    const token = localStorage.getItem('launchlens_token');
+    if (token) {
+      try {
+        await fetch('/api/auth/logout', {
+          method: 'POST',
+          headers: { 'Authorization': `Bearer ${token}` }
+        });
+      } catch (err) {
+        console.error("Logout error:", err);
+      }
+    }
+    localStorage.removeItem('launchlens_token');
+    localStorage.removeItem('launchlens_user');
+    setUser(null);
+  };
+
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans selection:bg-indigo-500/30 selection:text-indigo-200">
+      {/* Step 3 & 4 in Control Flow Diagram: Authentication Gateway */}
+      {!user && (
+        <AuthModal onAuthSuccess={handleAuthSuccess} />
+      )}
+
       <Header 
         activeTab={activeTab} 
         setActiveTab={setActiveTab} 
-        onOpenProjectInfo={() => setIsModalOpen(true)} 
+        onOpenProjectInfo={() => setIsModalOpen(true)}
+        currentUser={user}
+        onLogout={handleLogout}
       />
 
+      {/* Main Dashboard (Unlocked after Valid Credentials) */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
         {activeTab === 'validator' && (
           <IdeaInputForm
@@ -133,7 +197,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="space-y-1 text-center sm:text-left">
             <p className="font-bold text-slate-200">
-              LaunchLens AI • AI-Powered Startup Idea Validation Platform
+              LaunchLens AI • Control Flow Architecture & Startup Validation Platform
             </p>
             <p className="text-slate-500">
               Department of Information Technology • Academic Year 2026–2027
@@ -144,13 +208,13 @@ export default function App() {
               onClick={() => setIsModalOpen(true)}
               className="text-indigo-400 hover:text-indigo-300 font-semibold cursor-pointer underline underline-offset-2"
             >
-              Methodology & Research Overview
+              Control Flow Diagram & Methodology
             </button>
           </div>
         </div>
       </footer>
 
-      {/* Project Info & Team Modal */}
+      {/* Control Flow & Methodology Modal */}
       <ProjectInfoModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}

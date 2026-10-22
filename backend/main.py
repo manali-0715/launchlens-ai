@@ -4,13 +4,14 @@ import sys
 # Ensure ml module is on sys.path
 sys.path.append(os.path.join(os.path.dirname(__file__), 'ml'))
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Header, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
 from typing import Optional, List, Dict, Any
 
+from auth_service import auth_service
 from feasibility_engine import feasibility_engine
 from competitor_service import competitor_service
 from validation_service import validation_service
@@ -50,6 +51,74 @@ class IdeaInput(BaseModel):
 class ChatRequest(BaseModel):
     message: str
     context: Optional[Dict[str, Any]] = {}
+
+class RegisterInput(BaseModel):
+    email: str
+    password: str
+    full_name: str
+    role: Optional[str] = "Startup Founder"
+
+class LoginInput(BaseModel):
+    email: str
+    password: str
+
+@app.post("/api/auth/register")
+def register(data: RegisterInput):
+    try:
+        user = auth_service.register_user(
+            email=data.email,
+            password=data.password,
+            full_name=data.full_name,
+            role=data.role or "Startup Founder"
+        )
+        auth_data = auth_service.authenticate_user(data.email, data.password)
+        return auth_data
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+@app.post("/api/auth/login")
+def login(data: LoginInput):
+    try:
+        auth_data = auth_service.authenticate_user(data.email, data.password)
+        return auth_data
+    except ValueError as e:
+        raise HTTPException(status_code=401, detail=str(e))
+
+@app.get("/api/auth/me")
+def get_current_user(authorization: Optional[str] = Header(None)):
+    if not authorization or not authorization.startswith("Bearer "):
+        raise HTTPException(status_code=401, detail="Missing or invalid authentication token.")
+    token = authorization[7:].strip()
+    user = auth_service.verify_token(token)
+    if not user:
+        raise HTTPException(status_code=401, detail="Session expired or invalid.")
+    return {"user": user}
+
+@app.post("/api/auth/logout")
+def logout(authorization: Optional[str] = Header(None)):
+    if authorization and authorization.startswith("Bearer "):
+        token = authorization[7:].strip()
+        auth_service.logout_token(token)
+    return {"success": True}
+
+@app.get("/api/auth/demo-credentials")
+def get_demo_credentials():
+    return {
+        "accounts": [
+            {
+                "label": "Founder Account",
+                "email": "founder@launchlens.ai",
+                "password": "password123",
+                "role": "Startup Founder"
+            },
+            {
+                "label": "Evaluator / Guide Account",
+                "email": "evaluator@atharva.edu",
+                "password": "password123",
+                "role": "Project Guide / Evaluator"
+            }
+        ]
+    }
 
 @app.get("/api/health")
 def health_check():
